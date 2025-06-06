@@ -48,6 +48,15 @@
       margin: 1rem auto;
       line-height: 1.6;
     }
+    .video {
+      margin-top: 3rem;
+    }
+    .video video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
     .cta {
       margin-top: 2.5rem;
     }
@@ -71,7 +80,14 @@
       color: #888;
       padding: 2rem 1rem;
     }
-
+    .qr-code {
+      margin-top: 2rem;
+    }
+    .qr-code img {
+      width: 140px;
+      height: auto;
+      margin-top: 1rem;
+    }
     @media screen and (max-width: 600px) {
       .product h2 {
         font-size: 1.4rem;
@@ -83,6 +99,9 @@
       .cta a {
         font-size: 1rem;
         padding: 0.9rem 1.6rem;
+      }
+      .video video {
+        height: auto;
       }
     }
   </style>
@@ -97,12 +116,24 @@
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
+
+    <div class="video">
+      <video controls autoplay muted loop>
+        <source src="https://i.imgur.com/MBHOhtx.mp4" type="video/mp4">
+        Din webbläsare stödjer inte video.
+      </video>
+    </div>
+
     <div class="cta">
-      <a href="mailto:rangebarhaji@live.se">Anmäl ditt intresse</a>
+      <a href="mailto:kontakt@mutavo.se">Anmäl ditt intresse</a>
     </div>
   </section>
   <footer>
-    &copy; 2025 Mutavo. Alla rättigheter förbehållna.
+    <p>&copy; 2025 Mutavo. Alla rättigheter förbehållna.</p>
+    <div class="qr-code">
+      <p>Skanna för att öppna:</p>
+      <img src="https://i.imgur.com/2yMx2sL.png" alt="Mutavo QR-kod">
+    </div>
   </footer>
 </body>
 </html>
