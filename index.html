@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mutavo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutavo – SILENCE YOUR SPACE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000000;
+      background: #000;
       margin: 0;
       padding: 0;
-      color: #E0D4F7;
+      color: #eaeaea;
     }
     header {
       text-align: center;
-      padding: 0;
+      padding: 2rem 1rem 1rem;
     }
     header img {
-      width: 100%;
-      max-width: 800px;
+      max-width: 300px;
       height: auto;
-      display: block;
-      margin: 0 auto;
     }
     section {
       padding: 2rem 1rem;
-      max-width: 900px;
+      max-width: 800px;
       margin: auto;
       text-align: center;
     }
@@ -34,103 +32,86 @@
       height: auto;
       border-radius: 14px;
       box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-      margin-bottom: 1.5rem;
     }
     .product h2 {
-      margin-top: 1rem;
-      font-size: 1.8rem;
-      color: #CBB3FF;
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      color: #cba6f7;
     }
     .product p {
-      font-size: 1.1rem;
-      color: #D8C8F2;
-      max-width: 680px;
+      font-size: 1rem;
+      color: #d6d6d6;
+      max-width: 650px;
       margin: 1rem auto;
-      line-height: 1.6;
-    }
-    .video {
-      margin-top: 3rem;
-    }
-    .video video {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
     }
     .cta {
-      margin-top: 2.5rem;
+      margin-top: 3rem;
     }
     .cta a {
-      background-color: #CBB3FF;
-      color: #000;
-      padding: 1rem 2.2rem;
+      background-color: #9b30ff;
+      color: #fff;
+      padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1rem;
       transition: background 0.3s ease;
       display: inline-block;
     }
     .cta a:hover {
-      background-color: #E0D4F7;
+      background-color: #b85cff;
     }
     footer {
       text-align: center;
       font-size: 0.85rem;
-      color: #888;
+      color: #999;
       padding: 2rem 1rem;
-    }
-    .qr-code {
-      margin-top: 2rem;
-    }
-    .qr-code img {
-      width: 140px;
-      height: auto;
-      margin-top: 1rem;
     }
     @media screen and (max-width: 600px) {
       .product h2 {
         font-size: 1.4rem;
       }
       .product p {
-        font-size: 1rem;
-        padding: 0 1rem;
+        font-size: 0.95rem;
       }
       .cta a {
-        font-size: 1rem;
-        padding: 0.9rem 1.6rem;
+        font-size: 0.95rem;
+        padding: 0.8rem 1.5rem;
       }
-      .video video {
-        height: auto;
-      }
+    }
+
+    /* Rangebar Haji skrivstil */
+    .signature {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #9b30ff;
+      z-index: 1000;
     }
   </style>
 </head>
 <body>
+  <div class="signature">Rangebar Haji</div>
+
   <header>
-    <img src="https://i.imgur.com/uhNSVVq.png" alt="Mutavo banner">
+    <img src="https://i.imgur.com/uhNSVVq.png" alt="Mutavo Logo & Slogan">
   </header>
+
   <section>
     <div class="product">
       <img src="https://i.imgur.com/WPFYU9t.png" alt="Mutavo produkter">
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
-
-    <div class="video">
-      <video controls autoplay muted loop>
-        <source src="https://i.imgur.com/MBHOhtx.mp4" type="video/mp4">
-        Din webbläsare stödjer inte video.
-      </video>
-    </div>
-
     <div class="cta">
       <a href="mailto:kontakt@mutavo.se">Anmäl ditt intresse</a>
     </div>
   </section>
+
   <footer>
-    <p>&copy; 2025 Mutavo. Alla rättigheter förbehållna.</p>
-    
+    &copy; 2025 Mutavo. Alla rättigheter förbehållna.
   </footer>
 </body>
 </html>
