@@ -20,7 +20,7 @@
     header img {
       max-width: 800px;
       height: auto;
-    
+      width: 100%;
     }
     section {
       padding: 2rem 1rem;
@@ -68,18 +68,6 @@
       color: #999;
       padding: 2rem 1rem;
     }
-    @media screen and (max-width: 600px) {
-      .product h2 {
-        font-size: 1.4rem;
-      }
-      .product p {
-        font-size: 0.95rem;
-      }
-      .cta a {
-        font-size: 0.95rem;
-        padding: 0.8rem 1.5rem;
-      }
-    }
     .signature {
       position: absolute;
       top: 10px;
@@ -101,6 +89,27 @@
       max-width: 700px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(155, 48, 255, 0.4);
+    }
+
+    @media screen and (max-width: 600px) {
+      header img {
+        width: 90%;
+        max-width: 100%;
+      }
+      .product h2 {
+        font-size: 1.3rem;
+      }
+      .product p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+      .cta a {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+      }
+      .video-container {
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
