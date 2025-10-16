@@ -78,12 +78,9 @@
       z-index: 1000;
       text-decoration: none;
     }
-    .signature:hover {
-      color: #d3a7ff;
-    }
-    .video-container {
-      margin-top: 3rem;
-    }
+    .signature:hover { color: #d3a7ff; }
+
+    .video-container { margin-top: 3rem; }
     .video-container video {
       width: 100%;
       max-width: 700px;
@@ -92,24 +89,11 @@
     }
 
     @media screen and (max-width: 600px) {
-      header img {
-        width: 90%;
-        max-width: 100%;
-      }
-      .product h2 {
-        font-size: 1.3rem;
-      }
-      .product p {
-        font-size: 0.9rem;
-        padding: 0 1rem;
-      }
-      .cta a {
-        font-size: 0.9rem;
-        padding: 0.8rem 1.2rem;
-      }
-      .video-container {
-        padding: 0 1rem;
-      }
+      header img { width: 90%; max-width: 100%; }
+      .product h2 { font-size: 1.3rem; }
+      .product p { font-size: 0.9rem; padding: 0 1rem; }
+      .cta a { font-size: 0.9rem; padding: 0.8rem 1.2rem; }
+      .video-container { padding: 0 1rem; }
     }
   </style>
 </head>
@@ -129,7 +113,7 @@
     </div>
 
     <div class="video-container">
-      <video controls autoplay muted>
+      <video controls autoplay muted playsinline>
         <source src="https://i.imgur.com/MBHOhtx.mp4" type="video/mp4">
         Din webbläsare stödjer inte videoformatet.
       </video>
@@ -143,5 +127,30 @@
   <footer>
     &copy; 2025 Mutavo. Alla rättigheter förbehållna.
   </footer>
+
+  <!-- 🔊 Bakgrundsmusik: autoplay (muted) och slås på vid första interaktion -->
+  <audio id="bgm" src="Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
+  <script>
+    (function () {
+      const bgm = document.getElementById('bgm');
+      if (!bgm) return;
+
+      // Försök starta muted (tillåts oftast)
+      bgm.play().catch(() => { /* vissa mobiler kräver interaktion */ });
+
+      // Vid första klick/touch: slå på ljudet och spela
+      function enableSoundOnce() {
+        try {
+          bgm.muted = false;
+          bgm.volume = 0.6; // justera om du vill
+          bgm.play().catch(()=>{});
+        } catch(e) {}
+        window.removeEventListener('click', enableSoundOnce);
+        window.removeEventListener('touchstart', enableSoundOnce);
+      }
+      window.addEventListener('click', enableSoundOnce, { once: true });
+      window.addEventListener('touchstart', enableSoundOnce, { once: true });
+    })();
+  </script>
 </body>
 </html>
