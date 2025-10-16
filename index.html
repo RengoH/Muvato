@@ -6,12 +6,23 @@
   <title>Mutavo – SILENCE YOUR SPACE</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --mutavo-lila: #9b30ff;
+      --mutavo-lila-2:#b85cff;
+      --text:#eaeaea;
+      --text-dim:#d6d6d6;
+      --text-soft:#999;
+      --card-bg: rgba(255,255,255,0.06);
+      --card-brd: rgba(255,255,255,0.12);
+      --glow: 0 0 20px rgba(155,48,255,.35);
+    }
+    *{box-sizing:border-box}
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #000;
       margin: 0;
       padding: 0;
-      color: #eaeaea;
+      color: var(--text);
     }
     header {
       text-align: center;
@@ -24,7 +35,7 @@
     }
     section {
       padding: 2rem 1rem;
-      max-width: 700px;
+      max-width: 980px;
       margin: auto;
       text-align: center;
     }
@@ -41,32 +52,87 @@
     }
     .product p {
       font-size: 1rem;
-      color: #d6d6d6;
+      color: var(--text-dim);
       max-width: 650px;
       margin: 1rem auto;
     }
+
+    /* NY SEKTIONSSTIL: “Använd Mutavo här” */
+    .use-cases{
+      margin-top: 3.2rem;
+      text-align: left;
+    }
+    .use-cases h3{
+      text-align:center;
+      font-size:1.6rem;
+      margin:0 0 1.4rem;
+      color:#e9dbff;
+      letter-spacing:.2px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .card{
+      background: var(--card-bg);
+      border:1px solid var(--card-brd);
+      border-radius:14px;
+      overflow:hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover{
+      transform: translateY(-4px);
+      box-shadow: var(--glow);
+      border-color: rgba(155,48,255,.35);
+    }
+    .card .img-wrap{
+      aspect-ratio: 16/10;
+      background: radial-gradient(120% 120% at 50% 0%, rgba(155,48,255,.3), rgba(0,0,0,.2) 60%);
+      display:block;
+    }
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      display:block;
+    }
+    .card h4{
+      margin: .9rem 1rem .25rem;
+      font-size:1.05rem;
+      color:#f3e9ff;
+      letter-spacing:.2px;
+    }
+    .card p{
+      margin: 0 1rem 1.1rem;
+      font-size:.95rem;
+      color: var(--text-dim);
+      line-height:1.45;
+    }
+
     .cta {
       margin-top: 3rem;
     }
     .cta a {
-      background-color: #9b30ff;
+      background-color: var(--mutavo-lila);
       color: #fff;
       padding: 1rem 2rem;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
       font-size: 1rem;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform .2s ease;
       display: inline-block;
     }
     .cta a:hover {
-      background-color: #b85cff;
+      background-color: var(--mutavo-lila-2);
+      transform: translateY(-1px);
     }
     footer {
       text-align: center;
       font-size: 0.85rem;
-      color: #999;
-      padding: 2rem 1rem;
+      color: var(--text-soft);
+      padding: 2rem 1rem 3.5rem;
     }
     .signature {
       position: absolute;
@@ -74,7 +140,7 @@
       right: 20px;
       font-family: 'Great Vibes', cursive;
       font-size: 1.8rem;
-      color: #9b30ff;
+      color: var(--mutavo-lila);
       z-index: 1000;
       text-decoration: none;
     }
@@ -85,15 +151,20 @@
       width: 100%;
       max-width: 700px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(155, 48, 255, 0.4);
+      box-shadow: var(--glow);
     }
 
-    @media screen and (max-width: 600px) {
+    /* Responsivitet */
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
       header img { width: 90%; max-width: 100%; }
       .product h2 { font-size: 1.3rem; }
-      .product p { font-size: 0.9rem; padding: 0 1rem; }
-      .cta a { font-size: 0.9rem; padding: 0.8rem 1.2rem; }
+      .product p { font-size: 0.95rem; padding: 0 1rem; }
+      .cta a { font-size: 0.95rem; padding: 0.8rem 1.2rem; }
       .video-container { padding: 0 1rem; }
+      .use-cases h3{ font-size:1.35rem; }
     }
   </style>
 </head>
@@ -110,6 +181,52 @@
       <img src="https://i.imgur.com/WPFYU9t.png" alt="Mutavo produkter">
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
+    </div>
+
+    <!-- NY SEKTION: Använd Mutavo här -->
+    <div class="use-cases">
+      <h3>Använd Mutavo här</h3>
+      <div class="grid">
+        <!-- KORT 1 -->
+        <article class="card">
+          <div class="img-wrap">
+            <!-- BYT TILL DIN BILD: skola/grupparbete med Nest i mitten -->
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Mutavo i skolan">
+          </div>
+          <h4>Skola</h4>
+          <p>Skapa lugn i grupparbeten och korridorer. Perfekt för fokus i stökiga miljöer.</p>
+        </article>
+
+        <!-- KORT 2 -->
+        <article class="card">
+          <div class="img-wrap">
+            <!-- BYT TILL DIN BILD: öppet kontor, Flow på person -->
+            <img src="https://images.unsplash.com/photo-1529336953121-b0c18ee9f7f3?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret">
+          </div>
+          <h4>Kontor</h4>
+          <p>Minska bakgrundsljud i öppna landskap utan att isolera dig från kollegor.</p>
+        </article>
+
+        <!-- KORT 3 -->
+        <article class="card">
+          <div class="img-wrap">
+            <!-- BYT TILL DIN BILD: cafémiljö med Nest på bordet -->
+            <img src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café">
+          </div>
+          <h4>Café</h4>
+          <p>Ta med din tysta zon till caféet – jobba, plugga och samtala i lugnare ljudmiljö.</p>
+        </article>
+
+        <!-- KORT 4 -->
+        <article class="card">
+          <div class="img-wrap">
+            <!-- BYT TILL DIN BILD: resor – tåg/flyg, Flow på person -->
+            <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på resor">
+          </div>
+          <h4>Resor</h4>
+          <p>Perfekt på tåg, flyg och buss – bärbar tystnad utan hörlurar.</p>
+        </article>
+      </div>
     </div>
 
     <div class="video-container">
@@ -134,17 +251,11 @@
     (function () {
       const bgm = document.getElementById('bgm');
       if (!bgm) return;
+      bgm.volume = 0.6;
+      bgm.play().catch(() => {});
 
-      // Försök starta muted (tillåts oftast)
-      bgm.play().catch(() => { /* vissa mobiler kräver interaktion */ });
-
-      // Vid första klick/touch: slå på ljudet och spela
       function enableSoundOnce() {
-        try {
-          bgm.muted = false;
-          bgm.volume = 0.6; // justera om du vill
-          bgm.play().catch(()=>{});
-        } catch(e) {}
+        try { bgm.muted = false; bgm.play().catch(()=>{}); } catch(e) {}
         window.removeEventListener('click', enableSoundOnce);
         window.removeEventListener('touchstart', enableSoundOnce);
       }
