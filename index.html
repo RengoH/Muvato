@@ -146,14 +146,6 @@
     }
     .signature:hover { color: #d3a7ff; }
 
-    .video-container { margin-top: 3rem; }
-    .video-container video {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: var(--glow);
-    }
-
     /* Responsivitet */
     @media (max-width: 900px){
       .grid{ grid-template-columns: repeat(2, 1fr); }
@@ -163,7 +155,6 @@
       .product h2 { font-size: 1.3rem; }
       .product p { font-size: 0.95rem; padding: 0 1rem; }
       .cta a { font-size: 0.95rem; padding: 0.8rem 1.2rem; }
-      .video-container { padding: 0 1rem; }
       .use-cases h3{ font-size:1.35rem; }
     }
   </style>
@@ -183,57 +174,46 @@
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
 
-    <!-- NY SEKTION: Använd Mutavo här -->
+    <!-- SEKTION: Använd Mutavo här -->
     <div class="use-cases">
       <h3>Använd Mutavo här</h3>
       <div class="grid">
-        <!-- KORT 1 -->
+        <!-- Skola -->
         <article class="card">
           <div class="img-wrap">
-            <!-- BYT TILL DIN BILD: skola/grupparbete med Nest i mitten -->
             <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Mutavo i skolan">
           </div>
           <h4>Skola</h4>
           <p>Skapa lugn i grupparbeten och korridorer. Perfekt för fokus i stökiga miljöer.</p>
         </article>
 
-        <!-- KORT 2 -->
+        <!-- Kontor (ny bild) -->
         <article class="card">
           <div class="img-wrap">
-            <!-- BYT TILL DIN BILD: öppet kontor, Flow på person -->
-            <img src="https://images.unsplash.com/photo-1529336953121-b0c18ee9f7f3?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret">
           </div>
           <h4>Kontor</h4>
           <p>Minska bakgrundsljud i öppna landskap utan att isolera dig från kollegor.</p>
         </article>
 
-        <!-- KORT 3 -->
+        <!-- Café -->
         <article class="card">
           <div class="img-wrap">
-            <!-- BYT TILL DIN BILD: cafémiljö med Nest på bordet -->
             <img src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café">
           </div>
           <h4>Café</h4>
           <p>Ta med din tysta zon till caféet – jobba, plugga och samtala i lugnare ljudmiljö.</p>
         </article>
 
-        <!-- KORT 4 -->
+        <!-- Resor -->
         <article class="card">
           <div class="img-wrap">
-            <!-- BYT TILL DIN BILD: resor – tåg/flyg, Flow på person -->
             <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på resor">
           </div>
           <h4>Resor</h4>
           <p>Perfekt på tåg, flyg och buss – bärbar tystnad utan hörlurar.</p>
         </article>
       </div>
-    </div>
-
-    <div class="video-container">
-      <video controls autoplay muted playsinline>
-        <source src="https://i.imgur.com/MBHOhtx.mp4" type="video/mp4">
-        Din webbläsare stödjer inte videoformatet.
-      </video>
     </div>
 
     <div class="cta">
@@ -245,7 +225,7 @@
     &copy; 2025 Mutavo. Alla rättigheter förbehållna.
   </footer>
 
-  <!-- 🔊 Bakgrundsmusik: autoplay (muted) och slås på vid första interaktion -->
+  <!-- Bakgrundsmusik -->
   <audio id="bgm" src="Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
   <script>
     (function () {
@@ -253,7 +233,6 @@
       if (!bgm) return;
       bgm.volume = 0.6;
       bgm.play().catch(() => {});
-
       function enableSoundOnce() {
         try { bgm.muted = false; bgm.play().catch(()=>{}); } catch(e) {}
         window.removeEventListener('click', enableSoundOnce);
