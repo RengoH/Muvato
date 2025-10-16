@@ -57,7 +57,6 @@
       margin: 1rem auto;
     }
 
-    /* Sektionen “Använd Mutavo här” */
     .use-cases{
       margin-top: 3.2rem;
       text-align: left;
@@ -110,8 +109,18 @@
       line-height:1.45;
     }
 
-    .cta {
+    /* NY RUBRIK "Vart vill du ha din tystnad?" */
+    .cta-heading {
       margin-top: 3rem;
+      font-size: 1.4rem;
+      color: var(--mutavo-lila);
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .cta {
+      margin-top: 1.5rem;
     }
     .cta a {
       background-color: var(--mutavo-lila);
@@ -128,6 +137,7 @@
       background-color: var(--mutavo-lila-2);
       transform: translateY(-1px);
     }
+
     footer {
       text-align: center;
       font-size: 0.85rem;
@@ -146,7 +156,6 @@
     }
     .signature:hover { color: #d3a7ff; }
 
-    /* Responsivitet */
     @media (max-width: 900px){
       .grid{ grid-template-columns: repeat(2, 1fr); }
     }
@@ -154,6 +163,7 @@
       header img { width: 90%; max-width: 100%; }
       .product h2 { font-size: 1.3rem; }
       .product p { font-size: 0.95rem; padding: 0 1rem; }
+      .cta-heading { font-size: 1.2rem; }
       .cta a { font-size: 0.95rem; padding: 0.8rem 1.2rem; }
       .use-cases h3{ font-size:1.35rem; }
     }
@@ -174,11 +184,9 @@
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
 
-    <!-- SEKTION: Använd Mutavo här -->
     <div class="use-cases">
       <h3>Använd Mutavo här</h3>
       <div class="grid">
-        <!-- Skola -->
         <article class="card">
           <div class="img-wrap">
             <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Mutavo i skolan">
@@ -187,7 +195,6 @@
           <p>Skapa lugn i grupparbeten och korridorer. Perfekt för fokus i stökiga miljöer.</p>
         </article>
 
-        <!-- Kontor -->
         <article class="card">
           <div class="img-wrap">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret">
@@ -196,7 +203,6 @@
           <p>Minska bakgrundsljud i öppna landskap utan att isolera dig från kollegor.</p>
         </article>
 
-        <!-- Café (uppdaterad bild) -->
         <article class="card">
           <div class="img-wrap">
             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café">
@@ -205,16 +211,18 @@
           <p>Ta med din tysta zon till caféet – jobba, plugga och samtala i lugnare ljudmiljö.</p>
         </article>
 
-        <!-- Resor (byt till din egen bild nedan) -->
         <article class="card">
           <div class="img-wrap">
-            <img src="MutavoFlowPerson2.png" alt="Mutavo på resor">
+            <img src="DIN-EGEN-BILDLÄNK-HÄR" alt="Mutavo på resor">
           </div>
           <h4>Resor</h4>
           <p>Perfekt på tåg, flyg och buss – bärbar tystnad utan hörlurar.</p>
         </article>
       </div>
     </div>
+
+    <!-- NY RUBRIK -->
+    <h3 class="cta-heading">Vart vill du ha din tystnad?</h3>
 
     <div class="cta">
       <a href="mailto:rangebarhaji@live.se.se">Anmäl ditt intresse</a>
@@ -225,7 +233,6 @@
     &copy; 2025 Mutavo. Alla rättigheter förbehållna.
   </footer>
 
-  <!-- Bakgrundsmusik -->
   <audio id="bgm" src="Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
   <script>
     (function () {
