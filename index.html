@@ -57,7 +57,6 @@
       margin: 1rem auto;
     }
 
-    /* Use-cases */
     .use-cases{
       margin-top: 3.2rem;
       text-align: left;
@@ -110,116 +109,54 @@
       line-height:1.45;
     }
 
-    /* 1) Teknologin bakom Mutavo */
-    .tech {
-      margin-top: 3rem;
-      text-align: left;
-    }
-    .tech h3{
-      text-align:center;
-      font-size:1.6rem;
-      margin:0 0 1.2rem;
-      color:#e9dbff;
-    }
-    .tech-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:16px;
-    }
+    .tech { margin-top: 3rem; text-align: left; }
+    .tech h3{ text-align:center; font-size:1.6rem; margin:0 0 1.2rem; color:#e9dbff; }
+    .tech-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; }
     .tech-card{
-      background: var(--card-bg);
-      border:1px solid var(--card-brd);
-      border-radius:14px;
-      padding: 1rem;
-      text-align:left;
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      background: var(--card-bg); border:1px solid var(--card-brd); border-radius:14px;
+      padding: 1rem; text-align:left; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
     .tech-card:hover{ transform: translateY(-3px); box-shadow: var(--glow); border-color: rgba(155,48,255,.35);}
     .tech-emoji{ font-size:1.4rem; display:inline-block; margin-bottom:.5rem; }
     .tech-card h4{ margin:.2rem 0 .35rem; color:#f3e9ff; }
     .tech-card p{ margin:0; color:var(--text-dim); font-size:.95rem; line-height:1.45;}
 
-    /* 2) Framtidsteaser */
     .teaser{
-      margin-top: 3rem;
-      background: linear-gradient(180deg, rgba(155,48,255,.08), rgba(0,0,0,0));
-      border:1px solid var(--card-brd);
-      border-radius: 16px;
-      padding: 1.6rem;
+      margin-top: 3rem; background: linear-gradient(180deg, rgba(155,48,255,.08), rgba(0,0,0,0));
+      border:1px solid var(--card-brd); border-radius: 16px; padding: 1.6rem;
     }
-    .teaser h3{
-      margin:0 0 .5rem;
-      color:#e9dbff;
-      font-size:1.4rem;
-    }
-    .teaser p{
-      margin:.2rem auto 0;
-      max-width:720px;
-      color:var(--text-dim);
-    }
-    .teaser .tagline{
-      margin-top:.6rem;
-      font-weight:700;
-      color: var(--mutavo-lila);
-      letter-spacing:.4px;
-    }
+    .teaser h3{ margin:0 0 .5rem; color:#e9dbff; font-size:1.4rem; }
+    .teaser p{ margin:.2rem auto 0; max-width:720px; color:var(--text-dim); }
+    .teaser .tagline{ margin-top:.6rem; font-weight:700; color: var(--mutavo-lila); letter-spacing:.4px; }
 
-    /* 3) Citat */
     .quote {
-      margin-top: 2.6rem;
-      font-size:1.8rem;
-      font-weight:700;
-      color:#eae1ff;
-      letter-spacing:.3px;
-      text-align:center;
+      margin-top: 2.6rem; font-size:1.8rem; font-weight:700; color:#eae1ff;
+      letter-spacing:.3px; text-align:center;
     }
-    .quote small{
-      display:block; margin-top:.6rem; font-size:.95rem; color:var(--text-soft); font-weight:400;
-    }
+    .quote small{ display:block; margin-top:.6rem; font-size:.95rem; color:var(--text-soft); font-weight:400; }
 
-    /* CTA */
     .cta-heading {
-      margin-top: 3rem;
-      font-size: 1.4rem;
-      color: var(--mutavo-lila);
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      margin-top: 3rem; font-size: 1.4rem; color: var(--mutavo-lila);
+      text-align: center; font-weight: 600; letter-spacing: 0.5px;
       text-shadow: 0 0 12px rgba(155,48,255,0.4); /* Mjuk ljuslila glow-effekt */
     }
     .cta { margin-top: 1.5rem; }
     .cta a {
-      background-color: var(--mutavo-lila);
-      color: #fff;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.3s ease, transform .2s ease;
-      display: inline-block;
+      background-color: var(--mutavo-lila); color: #fff; padding: 1rem 2rem;
+      text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem;
+      transition: background 0.3s ease, transform .2s ease; display: inline-block;
     }
     .cta a:hover { background-color: var(--mutavo-lila-2); transform: translateY(-1px); }
 
     footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-soft);
-      padding: 2rem 1rem 3.5rem;
+      text-align: center; font-size: 0.85rem; color: var(--text-soft); padding: 2rem 1rem 3.5rem;
     }
     .signature {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
-      color: var(--mutavo-lila);
-      z-index: 1000;
-      text-decoration: none;
+      position: absolute; top: 10px; right: 20px; font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem; color: var(--mutavo-lila); z-index: 1000; text-decoration: none;
     }
     .signature:hover { color: #d3a7ff; }
 
-    /* Responsivitet */
     @media (max-width: 900px){
       .grid{ grid-template-columns: repeat(2, 1fr); }
       .tech-grid{ grid-template-columns: 1fr; }
@@ -239,23 +176,22 @@
   <a class="signature" href="https://www.instagram.com/rengoh" target="_blank" rel="noopener noreferrer">Rangebar Haji</a>
 
   <header>
-    <img src="https://i.imgur.com/uhNSVVq.png" alt="Mutavo Logo & Slogan">
+    <img src="/uhNSVVq.png" alt="Mutavo Logo & Slogan" loading="lazy">
   </header>
 
   <section>
     <div class="product">
-      <img src="Mutavo.Produkt.png" alt="Mutavo produkter">
+      <img src="/Mutavo.Produkt.png" alt="Mutavo produkter" loading="lazy">
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
 
-    <!-- ANVÄND MUTAVO HÄR -->
     <div class="use-cases">
       <h3>Använd Mutavo här</h3>
       <div class="grid">
         <article class="card">
           <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Mutavo i skolan">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Mutavo i skolan" loading="lazy">
           </div>
           <h4>Skola</h4>
           <p>Skapa lugn i grupparbeten och korridorer. Perfekt för fokus i stökiga miljöer.</p>
@@ -263,7 +199,7 @@
 
         <article class="card">
           <div class="img-wrap">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på kontoret" loading="lazy">
           </div>
           <h4>Kontor</h4>
           <p>Minska bakgrundsljud i öppna landskap utan att isolera dig från kollegor.</p>
@@ -271,8 +207,7 @@
 
         <article class="card">
           <div class="img-wrap">
-            <!-- Uppdaterad cafébild -->
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café" loading="lazy">
           </div>
           <h4>Café</h4>
           <p>Ta med din tysta zon till caféet – jobba, plugga och samtala i lugnare ljudmiljö.</p>
@@ -280,8 +215,7 @@
 
         <article class="card">
           <div class="img-wrap">
-            <!-- Byt till din egen resbild -->
-            <img src="MutavoFlowPerson2.png" alt="Mutavo på resor">
+            <img src="/MutavoFlowPerson2.png" alt="Mutavo på resor" loading="lazy">
           </div>
           <h4>Resor</h4>
           <p>Perfekt på tåg, flyg och buss – bärbar tystnad utan hörlurar.</p>
@@ -289,7 +223,6 @@
       </div>
     </div>
 
-    <!-- 1) Teknik bakom Mutavo -->
     <div class="tech">
       <h3>Teknologin bakom Mutavo</h3>
       <div class="tech-grid">
@@ -311,23 +244,20 @@
       </div>
     </div>
 
-    <!-- 2) Framtidsteaser -->
     <div class="teaser">
       <h3>Nästa generation tystnad</h3>
       <p>Vi utvecklar just nu nästa steg inom personlig ljudteknik: mer precis riktning, bättre batteritid och intelligentare ljuddetektering.</p>
       <p class="tagline">Framtiden är tyst.</p>
     </div>
 
-    <!-- 3) Citat -->
     <div class="quote">
       “Tystnad är inte frånvaro av ljud. Det är närvaro av fokus.”
       <small>– Mutavo Team</small>
     </div>
 
-    <!-- CTA -->
     <h3 class="cta-heading">Vart vill du ha din tystnad?</h3>
     <div class="cta">
-      <a href="mailto:rangebarhaji@live.se.se">Anmäl ditt intresse</a>
+      <a href="mailto:rangebarhaji@live.se">Anmäl ditt intresse</a>
     </div>
   </section>
 
@@ -336,7 +266,7 @@
   </footer>
 
   <!-- Bakgrundsmusik -->
-  <audio id="bgm" src="Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
+  <audio id="bgm" src="/Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
   <script>
     (function () {
       const bgm = document.getElementById('bgm');
