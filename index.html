@@ -177,41 +177,6 @@
       display:block; margin-top:.6rem; font-size:.95rem; color:var(--text-soft); font-weight:400;
     }
 
-    /* 4) Bakom Mutavo */
-    .story{
-      margin-top: 2.8rem;
-      text-align:left;
-      background: var(--card-bg);
-      border:1px solid var(--card-brd);
-      border-radius:14px;
-      padding: 1.2rem 1.3rem;
-    }
-    .story h3{ margin:.2rem 0 .7rem; color:#e9dbff; text-align:center;}
-    .story p{ margin:.4rem 0; color:var(--text-dim); }
-
-    /* 5) Interaktiv produktvisning (videoloop) */
-    .loop {
-      margin-top: 3rem;
-    }
-    .loop h3{
-      margin:0 0 .9rem;
-      color:#e9dbff;
-      font-size:1.4rem;
-    }
-    .loop video, .loop .loop-img {
-      width:100%;
-      max-width:720px;
-      border-radius:12px;
-      box-shadow: var(--glow);
-      display:block;
-      margin: 0 auto;
-    }
-    .loop .hint{
-      margin-top:.6rem;
-      color:var(--text-soft);
-      font-size:.9rem;
-    }
-
     /* CTA */
     .cta-heading {
       margin-top: 3rem;
@@ -220,6 +185,7 @@
       text-align: center;
       font-weight: 600;
       letter-spacing: 0.5px;
+      text-shadow: 0 0 12px rgba(155,48,255,0.4); /* Mjuk ljuslila glow-effekt */
     }
     .cta { margin-top: 1.5rem; }
     .cta a {
@@ -264,7 +230,7 @@
       .product p { font-size: 0.95rem; padding: 0 1rem; }
       .cta-heading { font-size: 1.2rem; }
       .cta a { font-size: 0.95rem; padding: 0.8rem 1.2rem; }
-      .use-cases h3, .tech h3, .loop h3 { font-size:1.35rem; }
+      .use-cases h3, .tech h3 { font-size:1.35rem; }
     }
   </style>
 </head>
@@ -273,12 +239,12 @@
   <a class="signature" href="https://www.instagram.com/rengoh" target="_blank" rel="noopener noreferrer">Rangebar Haji</a>
 
   <header>
-    <img src="https://i.imgur.com/uhNSVVq.png" alt="Mutavo Logo & Slogan">
+    <img src="Mutavo.Produkt.png" alt="Mutavo Logo & Slogan">
   </header>
 
   <section>
     <div class="product">
-      <img src="Mutavo.Produkt.png" alt="Mutavo produkter">
+      <img src="https://i.imgur.com/WPFYU9t.png" alt="Mutavo produkter">
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
@@ -356,21 +322,6 @@
     <div class="quote">
       “Tystnad är inte frånvaro av ljud. Det är närvaro av fokus.”
       <small>– Mutavo Team</small>
-    </div>
-
-    <!-- 4) Story -->
-    <div class="story">
-      <h3>Bakom Mutavo</h3>
-      <p>Mutavo föddes ur viljan att skapa lugn i en allt mer ljudfylld värld. Vi kombinerar enkel design med smart ljudteknik för att ge dig kontroll över ditt ljudrum – utan att isolera dig från livet runt omkring.</p>
-      <p>Vår mission är enkel: ge dig tystnad när du behöver den.</p>
-    </div>
-
-    <!-- 5) Interaktiv produktvisning (byt videolänk) -->
-    <div class="loop">
-      <h3>Upptäck designen</h3>
-      <!-- Byt src nedan till din egen korta videoloop (t.ex. 4–8 sek) -->
-      <video src="REPLACE-WITH-YOUR-PRODUCT-LOOP.mp4" autoplay muted loop playsinline poster="https://i.imgur.com/WPFYU9t.png"></video>
-      <div class="hint">Tips: Vill du inte använda video? Låt länken stå tom så visas bara bilden.</div>
     </div>
 
     <!-- CTA -->
