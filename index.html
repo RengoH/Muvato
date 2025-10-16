@@ -57,6 +57,7 @@
       margin: 1rem auto;
     }
 
+    /* Use-cases */
     .use-cases{
       margin-top: 3.2rem;
       text-align: left;
@@ -109,7 +110,109 @@
       line-height:1.45;
     }
 
-    /* NY RUBRIK "Vart vill du ha din tystnad?" */
+    /* 1) Teknologin bakom Mutavo */
+    .tech {
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .tech h3{
+      text-align:center;
+      font-size:1.6rem;
+      margin:0 0 1.2rem;
+      color:#e9dbff;
+    }
+    .tech-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .tech-card{
+      background: var(--card-bg);
+      border:1px solid var(--card-brd);
+      border-radius:14px;
+      padding: 1rem;
+      text-align:left;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .tech-card:hover{ transform: translateY(-3px); box-shadow: var(--glow); border-color: rgba(155,48,255,.35);}
+    .tech-emoji{ font-size:1.4rem; display:inline-block; margin-bottom:.5rem; }
+    .tech-card h4{ margin:.2rem 0 .35rem; color:#f3e9ff; }
+    .tech-card p{ margin:0; color:var(--text-dim); font-size:.95rem; line-height:1.45;}
+
+    /* 2) Framtidsteaser */
+    .teaser{
+      margin-top: 3rem;
+      background: linear-gradient(180deg, rgba(155,48,255,.08), rgba(0,0,0,0));
+      border:1px solid var(--card-brd);
+      border-radius: 16px;
+      padding: 1.6rem;
+    }
+    .teaser h3{
+      margin:0 0 .5rem;
+      color:#e9dbff;
+      font-size:1.4rem;
+    }
+    .teaser p{
+      margin:.2rem auto 0;
+      max-width:720px;
+      color:var(--text-dim);
+    }
+    .teaser .tagline{
+      margin-top:.6rem;
+      font-weight:700;
+      color: var(--mutavo-lila);
+      letter-spacing:.4px;
+    }
+
+    /* 3) Citat */
+    .quote {
+      margin-top: 2.6rem;
+      font-size:1.8rem;
+      font-weight:700;
+      color:#eae1ff;
+      letter-spacing:.3px;
+      text-align:center;
+    }
+    .quote small{
+      display:block; margin-top:.6rem; font-size:.95rem; color:var(--text-soft); font-weight:400;
+    }
+
+    /* 4) Bakom Mutavo */
+    .story{
+      margin-top: 2.8rem;
+      text-align:left;
+      background: var(--card-bg);
+      border:1px solid var(--card-brd);
+      border-radius:14px;
+      padding: 1.2rem 1.3rem;
+    }
+    .story h3{ margin:.2rem 0 .7rem; color:#e9dbff; text-align:center;}
+    .story p{ margin:.4rem 0; color:var(--text-dim); }
+
+    /* 5) Interaktiv produktvisning (videoloop) */
+    .loop {
+      margin-top: 3rem;
+    }
+    .loop h3{
+      margin:0 0 .9rem;
+      color:#e9dbff;
+      font-size:1.4rem;
+    }
+    .loop video, .loop .loop-img {
+      width:100%;
+      max-width:720px;
+      border-radius:12px;
+      box-shadow: var(--glow);
+      display:block;
+      margin: 0 auto;
+    }
+    .loop .hint{
+      margin-top:.6rem;
+      color:var(--text-soft);
+      font-size:.9rem;
+    }
+
+    /* CTA */
     .cta-heading {
       margin-top: 3rem;
       font-size: 1.4rem;
@@ -118,10 +221,7 @@
       font-weight: 600;
       letter-spacing: 0.5px;
     }
-
-    .cta {
-      margin-top: 1.5rem;
-    }
+    .cta { margin-top: 1.5rem; }
     .cta a {
       background-color: var(--mutavo-lila);
       color: #fff;
@@ -133,10 +233,7 @@
       transition: background 0.3s ease, transform .2s ease;
       display: inline-block;
     }
-    .cta a:hover {
-      background-color: var(--mutavo-lila-2);
-      transform: translateY(-1px);
-    }
+    .cta a:hover { background-color: var(--mutavo-lila-2); transform: translateY(-1px); }
 
     footer {
       text-align: center;
@@ -156,8 +253,10 @@
     }
     .signature:hover { color: #d3a7ff; }
 
+    /* Responsivitet */
     @media (max-width: 900px){
       .grid{ grid-template-columns: repeat(2, 1fr); }
+      .tech-grid{ grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       header img { width: 90%; max-width: 100%; }
@@ -165,7 +264,7 @@
       .product p { font-size: 0.95rem; padding: 0 1rem; }
       .cta-heading { font-size: 1.2rem; }
       .cta a { font-size: 0.95rem; padding: 0.8rem 1.2rem; }
-      .use-cases h3{ font-size:1.35rem; }
+      .use-cases h3, .tech h3, .loop h3 { font-size:1.35rem; }
     }
   </style>
 </head>
@@ -179,11 +278,12 @@
 
   <section>
     <div class="product">
-      <img src="Mutavo.Produkt.png" alt="Mutavo produkter">
+      <img src="https://i.imgur.com/WPFYU9t.png" alt="Mutavo produkter">
       <h2>Mutavo Flow & Nest</h2>
       <p>Njut av tystnad när du vill – oavsett om du arbetar, pluggar eller kopplar av. Mutavo ger dig friheten att fokusera, var du än är.</p>
     </div>
 
+    <!-- ANVÄND MUTAVO HÄR -->
     <div class="use-cases">
       <h3>Använd Mutavo här</h3>
       <div class="grid">
@@ -205,6 +305,7 @@
 
         <article class="card">
           <div class="img-wrap">
+            <!-- Uppdaterad cafébild -->
             <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Mutavo på café">
           </div>
           <h4>Café</h4>
@@ -213,7 +314,8 @@
 
         <article class="card">
           <div class="img-wrap">
-            <img src="MutavoFlowPerson2.png" alt="Mutavo på resor">
+            <!-- Byt till din egen resbild -->
+            <img src="DIN-EGEN-BILDLÄNK-HÄR" alt="Mutavo på resor">
           </div>
           <h4>Resor</h4>
           <p>Perfekt på tåg, flyg och buss – bärbar tystnad utan hörlurar.</p>
@@ -221,9 +323,58 @@
       </div>
     </div>
 
-    <!-- NY RUBRIK -->
-    <h3 class="cta-heading">Vart vill du ha din tystnad?</h3>
+    <!-- 1) Teknik bakom Mutavo -->
+    <div class="tech">
+      <h3>Teknologin bakom Mutavo</h3>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-emoji">🎙</div>
+          <h4>Aktiv brusanalys</h4>
+          <p>Mikrofonerna fångar omgivningen och identifierar störande mönster i realtid.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-emoji">🔊</div>
+          <h4>Adaptiv ljudkontroll</h4>
+          <p>Riktade högtalare skapar en lokal tyst zon genom fasstyrda ljudvågor.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-emoji">🌐</div>
+          <h4>Smart miljörespons</h4>
+          <p>Algoritmen justerar sig efter miljön – kontor, skola, café eller resor.</p>
+        </div>
+      </div>
+    </div>
 
+    <!-- 2) Framtidsteaser -->
+    <div class="teaser">
+      <h3>Nästa generation tystnad</h3>
+      <p>Vi utvecklar just nu nästa steg inom personlig ljudteknik: mer precis riktning, bättre batteritid och intelligentare ljuddetektering.</p>
+      <p class="tagline">Framtiden är tyst.</p>
+    </div>
+
+    <!-- 3) Citat -->
+    <div class="quote">
+      “Tystnad är inte frånvaro av ljud. Det är närvaro av fokus.”
+      <small>– Mutavo Team</small>
+    </div>
+
+    <!-- 4) Story -->
+    <div class="story">
+      <h3>Bakom Mutavo</h3>
+      <p>Mutavo föddes ur viljan att skapa lugn i en allt mer ljudfylld värld. Vi kombinerar enkel design med smart ljudteknik för att ge dig kontroll över ditt ljudrum – utan att isolera dig från livet runt omkring.</p>
+      <p>Vår mission är enkel: ge dig tystnad när du behöver den.</p>
+    </div>
+
+    <!-- 5) Interaktiv produktvisning (byt videolänk) -->
+    <div class="loop">
+      <h3>Upptäck designen</h3>
+      <!-- Byt src nedan till din egen korta videoloop (t.ex. 4–8 sek) -->
+      <video src="REPLACE-WITH-YOUR-PRODUCT-LOOP.mp4" autoplay muted loop playsinline poster="https://i.imgur.com/WPFYU9t.png"></video>
+      <div class="hint">Tips: Vill du inte använda video? Låt länken stå tom så visas bara bilden.</div>
+    </div>
+
+    <!-- CTA -->
+    <h3 class="cta-heading">Vart vill du ha din tystnad?</h3>
     <div class="cta">
       <a href="mailto:rangebarhaji@live.se.se">Anmäl ditt intresse</a>
     </div>
@@ -233,6 +384,7 @@
     &copy; 2025 Mutavo. Alla rättigheter förbehållna.
   </footer>
 
+  <!-- Bakgrundsmusik -->
   <audio id="bgm" src="Mutavo-Theme.mp3" autoplay loop muted playsinline></audio>
   <script>
     (function () {
